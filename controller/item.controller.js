@@ -94,39 +94,6 @@ exports.addItem = (req, res) => {
         res.status(500).send(error.SERVER_ERROR)
     }
 }
-// exports.addItem = (req, res) => {
-//     try {
-
-//         Items.findOne({
-//             where: {
-//                 item_name: req.body.item_name,
-//                 item_type: req.body.item_type
-//             }
-//         }).then(function (data) {
-//             if (data.length == 0) {
-//                 Items.create(req.body).then(async function (data) {
-//                     if (data && data.id) {
-//                         var result = error.OK;
-//                         return res.status(200).send(result);
-//                     }
-//                 }).catch(function (err) {
-//                     console.log(err);
-//                     return res.status(500).send(error.SERVER_ERROR)
-//                 });
-//             }
-//             else {
-//                 return res.status(200).send(error.ITEM_PRESENT);
-//             }
-//         }).catch(err => {
-//             console.log(err);
-//             res.status(500).send(error.SERVER_ERROR)
-//         });
-//     } catch (e) {
-//         console.log(e);
-//         res.status(500).send(error.SERVER_ERROR)
-//     }
-// }
-
 
 exports.deleteItem = (req, res) => {
     try {
