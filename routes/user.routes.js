@@ -89,14 +89,4 @@ module.exports = function (app) {
     [authJwt.verifyToken, authJwt.isAdmin],
     controller.Buyer
   );
-
-  app.get("/api/items",
-    [authJwt.verifyToken, authJwt.isAdmin],
-    controller.allItems
-  );
-
-  app.get("/api/item/:id",
-    [authJwt.verifyToken, authJwt.isAdmin],
-    controller.Item
-  );
 };
