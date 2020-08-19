@@ -74,8 +74,6 @@ exports.addItem = (req, res) => {
             if (data.length == 0) {
                 Items.create(req.body).then(async function (data) {
                     if (data && data.id) {
-
-                        
                         var result = error.OK;
                         return res.status(200).send(result);
                     }
